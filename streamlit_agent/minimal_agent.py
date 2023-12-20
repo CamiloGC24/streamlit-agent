@@ -4,7 +4,7 @@ from langchain.callbacks import StreamlitCallbackHandler
 import os
 import streamlit as st
 
-OPENAI_API_KEY = os.environ.get("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")
+OPENAI_API_KEY = "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"
 
 llm = OpenAI(openai_api_key=OPENAI_API_KEY, temperature=0, streaming=True)
 tools = load_tools(["llm-math","ddg-search"], llm=llm)
